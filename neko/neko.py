@@ -68,6 +68,7 @@ def main():
                 media {
                     title {
                         romaji
+                        english
                     }
                 }
             }
@@ -102,7 +103,7 @@ def main():
         line_break = "▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔".center(42)
         progress = activity["progress"] if activity["progress"] else "all"
         status = "{} {} {} of...".format(ANILIST_USERNAME, activity["status"], progress)
-        content = "{}\n{}\n{}".format(status, activity["media"]["title"]["romaji"].center(58), line_break)
+        content = "{}\n{}\n{}".format(status, activity["media"]["title"]["english"].center(58), line_break)
 
     else:
         print("Latest activity type not supported! Exiting...")
