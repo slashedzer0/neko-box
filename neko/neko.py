@@ -102,14 +102,14 @@ def main():
     elif activity["type"] == "ANIME_LIST" or activity["type"] == "MANGA_LIST":
         line_break = "▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔".center(42)
         progress = activity["progress"] if activity["progress"] else "all"
-        status = "{} {} {} of:".format(ANILIST_USERNAME, activity["status"], progress).center(42)
+        status = "{} {} {} of:".format(ANILIST_USERNAME, activity["status"], progress).center(59)
         
         if "english" in activity["media"]["title"] and activity["media"]["title"]["english"] is not None:
             title = activity["media"]["title"]["english"]
         else:
             title = activity["media"]["title"]["romaji"]
 
-        content = "{}\n{}\n{}".format(status, title.center(42), line_break)
+        content = "{}\n{}\n{}".format(status, title.center(59), line_break)
 
     else:
         print("Latest activity type not supported! Exiting...")
