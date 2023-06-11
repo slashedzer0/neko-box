@@ -1,4 +1,4 @@
-name: Update GitHub Gist with Neko-box!
+name: Update gist!
 
 on:
   schedule:
